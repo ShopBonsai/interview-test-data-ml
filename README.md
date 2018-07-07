@@ -1,3 +1,8 @@
+This is my solution to the recommendation tast (as described below). Run main.py to generate the desired csv file which contains ratings for each user-product pair, i.e. a 4363 x 3677 matrix of ratings. A detailed outline of the solution is also provided in the form of a notebook.
+
+================================================
+
+
 # Bonsai Interview Test
 
 Welcome to the Machine Learning interview test for Shop Bonsai.
