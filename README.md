@@ -1,4 +1,4 @@
-This is my solution to the recommendation tast (as described below). Run recsys.py to generate the desired csv file which contains ratings for each user-product pair, i.e. a 4363 x 3677 matrix of ratings. A compressed version of the csv file is included on this repo. Refer to the notebook for a detailed outline of the solution.
+This is my solution to the recommendation tast (as described below). Run recsys.py to generate the desired csv file which contains ratings for each user-product pair, i.e. a 4363 x 3677 matrix of ratings. A zipped version of the csv file is included on this repo (sorry for the inconvenience!). Refer to the notebook for a detailed outline of the solution.
 
 ================================================
 
