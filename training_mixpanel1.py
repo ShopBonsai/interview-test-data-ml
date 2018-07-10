@@ -7,7 +7,7 @@ import random
 from sklearn.preprocessing import MinMaxScaler
 from sklearn import metrics
 
-json_data=open('C:/Users/RB287JD/Desktop/Dhivya_upload/training_mixpanel.txt').read()
+json_data=open('training_mixpanel.txt').read()
 raw_data = json.loads(json_data)
 raw_data =  pd.DataFrame((d['properties'] for d in raw_data))
 
