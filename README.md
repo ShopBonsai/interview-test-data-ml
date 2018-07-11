@@ -1,35 +1,24 @@
-# Bonsai Interview Test
+This is a simple implementation of an implicit collaborative filtering where recommended products to user is done based on purchase history. As we can see from the data, there is no user rating or scores to consider it as an explicit data. So mixpanel data clearly shows type of implicit. 
 
-Welcome to the Machine Learning interview test for Shop Bonsai.
+Alternating Least Squares, popularly used implicit recommender technique, is a type of Matrix factorization to reduce the dimensionality of User/Product interaction. In other words we will find which products user has bought and which products the user never buy by interaction matrix. (Refer: http://yifanhu.net/PUB/cf.pdf)  we will fit our model using ALS implicit method from implicit library. Note: The implicit module requires Microsoft Visual C++ 14.0 is required to install and import.
 
-This interview test simulates a problem that is closely related to what you would be doing here at Shop Bonsai. 
+There is an important concept of Dot product that we use for finding the recommended products. The dot product calculates the similarity between the items and the users. It is given by
+                             **Score = User.〖Items〗^T**
+This similarity scores helps us in recommending the products that are similar to the one which user purchased. 
 
-### Scenario:
+# ALS Implicit recommendation  
+We will import text file, convert it to dataframe and check for null values. Remove rows if null values are present. Let’s create a separate dataframe for Product ID and description to get information on products and need this for later use.  
+Select columns such as 'product_id', 'quantity', 'customer_id' and drop all other columns. Convert all these columns to numerical types using cat and create a sparse matrix. The sparse matrix here contains both interactions and non-interactions between user and products. 
+Now train the data using ALS Model with iteration 25 (this can be increased based on the requirement) and alpha to 15. Alpha can be ranged from 15 to 40 depending upon the model performance, used in calculating confidence and regularization to avoid overfitting of data while training. The implicit ALS trains model much faster and gives User and Item vector from trained model. 
+Two functions are created to get the purchased items by an user and recommended items to the same user (remember the dot product from user and item vector gives rating, based on the ratings the system recommend items) 
 
-You joined as the new memeber of a small start-up team. Together we are building a new app to sell cool 3rd product 
-products! So far, the sales team worked tirelessly and managed to acquire over 50 merchants who each have different 
-brands and products offerings. The developers have made a ton of progress on the mobile app and there's a bunch of
-user activity on the app. The analytics platform Mixpanel is used to collect all the user event data.
-The next step is to optimize user conversion rates by offering new recommendations based on the analytics data.
+# AUROC: To check model performance
 
-### Goal:
-Your task is to recommend a product that a user is most likely to buy next using the purchase history provided.
-
-For the purpose of this interview test, we have provided mock data on customer purchase history from an e-commerce 
-retail company. The 'Purchased Product' events were queried through Mixpanel's API and is exported into the file 
-`training_mixpanel.txt`, as provided, in JSON format. Each event describes a singular product purchased by a 
-particular user, with  descriptive attributes of the product (e.g., quantity, unit price). Transactions purchasing 
-multiple products is denoted by `invoice_no`.
+Splitting the sparse matrix into trainData and TestData. In TrainData we select interactions randomly and change the binary value to 0 and leave out these 0 interactions. In testData, we have all the interactions made by user-item and labelled it as 1 (Refer: https://www.slideshare.net/g33ktalk/dataengconf-building-a-music-recommender-system-from-scratch-with-spotify-data-team). We have train data, test data and the user index data where we set the binary value 0 in train data. From roc_curve we calculate the AUC value for predicted ratings (dot product of user_vecs and item_vecs) with the Testdata. 
 
 
-### Evaluation:
-Your final submission should include all relevant code used, and an output csv file. The csv file should be a 
-M x N matrix, where M is the number of users and N is the number of products, where each entry r<sub>ij</sub> 
-represents the rating of product j for a given user i. A higher rating indicates that the user is more likely to 
-purchase a product.
-
-Your model will be evaluated by using [AUROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic). You 
-will be further evaluated on the quality of your coding style and model quality, methodology, and documentation.
-
-High scorers will be contacted via email within a week of acknowledgement of PR submission.
-Thank you and good luck for everyone who applied and submitted a PR.
+References:
+https://medium.com/radon-dev/als-implicit-collaborative-filtering-5ed653ba39fe
+http://www.salemmarafi.com/code/collaborative-filtering-with-python/
+https://www.slideshare.net/g33ktalk/dataengconf-building-a-music-recommender-system-from-scratch-with-spotify-data-team
+http://scikit-learn.org/stable/auto_examples/model_selection/plot_roc_crossval.html#sphx-glr-auto-examples-model-selection-plot-roc-crossval-py
