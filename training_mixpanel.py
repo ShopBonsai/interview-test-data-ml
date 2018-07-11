@@ -40,6 +40,10 @@ model.fit(data_conf)
 
 user_vecs = model.item_factors  ## user  vectors 
 item_vecs = model.user_factors  ##  item  vectors
+##the ratings can be viewed by Dot product of user_vecs and item_vecs
+user_vecs[0,:].dot(item_vecs).toarray()[0,:5] # this is for the first user. 
+#similarly for the second user it can be changed by assigning '1' in place of '0' as user index and so on. 
+
 users1 = np.array(users) # Array User ID 
 products1 = np.array(products)  
 
