@@ -41,6 +41,10 @@ model.fit(data_conf)
 user_vecs = model.item_factors  ## user  vectors 
 item_vecs = model.user_factors  ##  item  vectors
 
+##the ratings can be viewed by Dot product of user_vecs and item_vecs
+user_vecs[0,:].dot(item_vecs).toarray()[0,:5] #First User with index 0. 
+#similarly for the second user it can be changed by assigning '1' in place of '0' as user index and so on. 
+
 ## AUROC Test
 def split_data(sparse_data):   
     trainData = sparse_data.copy() # creating a train data 
