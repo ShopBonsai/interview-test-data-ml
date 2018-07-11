@@ -1,6 +1,6 @@
 This is a implementation of an implicit collaborative filtering where recommended products to user is done based on purchase history. As we can see from the data, there is no user rating or scores to consider it as an explicit data. So mixpanel data clearly shows type of implicit. 
 
-Alternating Least Squares, popularly used implicit recommender technique, is a type of Matrix factorization to reduce the dimensionality of User/Product interaction. In other words we will find which products user has bought and which products the user never buy by interaction matrix. (Refer: http://yifanhu.net/PUB/cf.pdf)  we will fit our model using ALS implicit method from implicit library. Note: The implicit module requires Microsoft Visual C++ 14.0 is required to install and import.
+Alternating Least Squares, popularly used implicit recommender technique, is a type of Matrix factorization to reduce the dimensionality of User/Product interaction. In other words we will find which products user has bought and which products the user never buy by interaction matrix. (Refer: http://yifanhu.net/PUB/cf.pdf)  we will fit our model using ALS implicit method from implicit library. Note: The implicit module requires Microsoft Visual C++ 14.0 to install and import.
 
 There is an important concept of Dot product that we use for finding the recommended products. The dot product calculates the similarity between the items and the users. It is given by
                              **Score = User.〖Items〗^T**
