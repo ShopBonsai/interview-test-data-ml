@@ -72,7 +72,7 @@ def recommended_products(customer_id, sparse_data, user_vecs, item_vecs, users1,
 
 final_data = pd.DataFrame()
 final_data['User ID'] = users1
-#final_data['Purchased'] = final_data.apply(lambda x:(consumed_product(x['User ID'], sparse_data, users1,products1,product_info).iloc[:,1:2]).to_dict(),axis=1)
+final_data['Purchased'] = final_data.apply(lambda x:(consumed_product(x['User ID'], sparse_data, users1,products1,product_info).iloc[:,1:2]).to_dict(),axis=1)
 final_data['Recommended'] = final_data.apply(lambda x: recommended_products(x['User ID'], 
           sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10),axis=1).astype(str)
 final_data.to_csv('finaldata.csv')
