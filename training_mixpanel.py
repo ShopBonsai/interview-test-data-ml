@@ -41,46 +41,8 @@ model.fit(data_conf)
 user_vecs = model.item_factors  ## user  vectors 
 item_vecs = model.user_factors  ##  item  vectors
 ##the ratings can be viewed by Dot product of user_vecs and item_vecs
-user_vecs[0,:].dot(item_vecs).toarray()[0,:5] # this is for the first user. 
+user_vecs[0,:].dot(item_vecs).toarray()[0,:5] # this is for the user with index 1. 
 #similarly for the second user it can be changed by assigning '1' in place of '0' as user index and so on. 
-
-users1 = np.array(users) # Array User ID 
-products1 = np.array(products)  
-
-def consumed_product(customer_id, sparse_data, users1,products1,product_info):
-    customer_index = np.where(users1 == customer_id)[0][0] 
-    purchased_index = sparse_data[customer_index,:].nonzero()[1] 
-    prod = products1[purchased_index] # Get consumed products
-    return product_info.loc[product_info.product_id.isin(prod)]
-
-def recommended_products(customer_id, sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10):        
-    customer_index = np.where(users1 == customer_id)[0][0] 
-    interaction = sparse_data[customer_index,:].toarray() # Get Interaction of User and Product
-    interaction = interaction.reshape(-1) + 1 # no recommend items the user has consumed. So let's set them all to 0 and the unknowns to 1.
-    interaction[interaction > 1] = 0 # Make everything already purchased zero  
-    recommend_vector = user_vecs[customer_index,:].dot(item_vecs.T) # Dot product for creating recommendation  
-    min_max = MinMaxScaler()
-    recommend_vector_scaled = min_max.fit_transform(recommend_vector.reshape(-1,1))[:,0] 
-    recommended = interaction*recommend_vector_scaled 
-    product_idx = np.argsort(recommended)[::-1][:num_items] # Sort the indices of the items into order 
-    recommend_list = [] # start empty list to store items
-    recommend_items = []
-    for index in product_idx:
-        cd = products1[index]
-        recommend_list.append([cd,product_info.description.loc[product_info.product_id == cd].iloc[0]]) 
-        recommend_items.append([product_info.description.loc[product_info.product_id == cd].iloc[0]]) 
-    return recommend_list,recommend_items
-
-#pr  = consumed_product(12347,sparse_data, users1, products1,product_info)
-#re = recommended_products(12347, sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10)
-
-final_data = pd.DataFrame()
-final_data['User ID'] = users1
-final_data['Purchased'] = final_data.apply(lambda x:(consumed_product(x['User ID'], sparse_data, users1,products1,product_info).iloc[:,1:2]).to_dict(),axis=1)
-final_data['Recommended'] = final_data.apply(lambda x: recommended_products(x['User ID'], 
-          sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10),axis=1).astype(str)
-final_data.to_csv('finaldata.csv')
-
 
 ## AUROC Test
 def split_data(sparse_data):   
@@ -95,8 +57,8 @@ def split_data(sparse_data):
     trainData[user, item] = 0 # Assign user-item pairs to zero
     trainData.eliminate_zeros() # eliminate zeros interactions to make sparse matrix dense  
     testData = sparse_data.copy()  
-    testData[testData != 0] = 1 # Labelling where interactions are present as binary data 1
-    return trainData, testData, list(set(user)) # Output the unique list of user rows that were altered  
+    testData[testData != 0] = 1 # change user interaction value to binary data 1 and others will have 0 value
+    return trainData, testData, list(set(user))  
 
 trainData, testData, user_index_test = split_data(sparse_data)
 
@@ -116,9 +78,58 @@ def auc(trainData,user_index_test, vectors, testData):
         aucs.append(auc_score(prediction, actual))
     return round(float(np.mean(aucs)),3)
   
-auc(trainData, user_index_test,[sparse.csr_matrix(user_vecs), sparse.csr_matrix(item_vecs.T)], testData)
+auc(trainData, user_index_test,[sparse.csr_matrix(user_vecs), sparse.csr_matrix(item_vecs.T)], testData) # gives the ROC value 
+
+users1 = np.array(users) # Array User ID 
+products1 = np.array(products)  
+
+def consumed_product(customer_id, sparse_data, users1,products1,product_info):
+    customer_index = np.where(users1 == customer_id)[0][0] 
+    purchased_index = sparse_data[customer_index,:].nonzero()[1] 
+    prod = products1[purchased_index] # Get consumed products
+    return product_info.loc[product_info.product_id.isin(prod)]
+
+def recommended_products(customer_id, sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10):        
+    customer_index = np.where(users1 == customer_id)[0][0] 
+    interaction = sparse_data[customer_index,:].toarray() # Get Interaction of User and Product
+    interaction = interaction.reshape(-1) + 1 # no recommend items the user has consumed. So let's set them all to 0 and the unknowns to 1.
+    interaction[interaction > 1] = 0 # Make everything already purchased zero  
+    recommend_vector = user_vecs[customer_index,:].dot(item_vecs.T) # Dot product for creating recommendation  
+    min_max = MinMaxScaler()
+    recommend_vector_scaled = min_max.fit_transform(recommend_vector.reshape(-1,1))[:,0] 
+    recommended = interaction*recommend_vector_scaled #Rating matrix
+    product_idx = np.argsort(recommended)[::-1][:num_items] # Sort the indices of the items into order 
+    recommend_list = [] # start empty list to store items along with product ID 
+    recommend_items = [] # stores items without product ID
+    for index in product_idx:
+        cd = products1[index]
+        recommend_list.append([cd,product_info.description.loc[product_info.product_id == cd].iloc[0]]) 
+        recommend_items.append([product_info.description.loc[product_info.product_id == cd].iloc[0]]) 
+    return recommend_list,recommend_items,recommended
+
+#pr  = consumed_product(12347,sparse_data, users1, products1,product_info)
+#re = recommended_products(12347, sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10)
 
 
+## Recommended Item dataframe and Rating dataframe  (This might be slow)
 
+final_data = pd.DataFrame()
+final_data['User ID'] = users1
+final_data['Purchased'] = final_data.apply(lambda x:(consumed_product(x['User ID'], sparse_data, users1,products1,product_info).iloc[:,1:2]).to_dict(),axis=1)
+final_data['Recommended'] = final_data.apply(lambda x: recommended_products(x['User ID'], 
+          sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10),axis=1).astype(str)
+final_data.to_csv('finaldata.csv')
+
+final_ratings =  pd.DataFrame()
+final_ratings.insert(loc=0, column='User ID', value= users1)
+final_ratings['Ratings'] = final_ratings.apply(lambda x: recommended_products(x['User ID'], 
+          sparse_data, user_vecs, item_vecs, users1, products1, product_info, num_items = 10)[2],axis=1)
+#final_ratings = final_ratings.join(pd.DataFrame(final_ratings['Ratings'].values.tolist()))
+final_ratings = final_ratings.join(final_ratings['Ratings'].apply(pd.Series))
+del final_ratings['Ratings']
+colname_prod = copy.deepcopy(products)
+colname_prod.insert(0,'User ID')
+final_ratings.columns = colname_prod
+final_ratings.to_csv('final_ratings.csv')
 
 
