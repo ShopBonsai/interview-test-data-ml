@@ -1,0 +1,572 @@
+2018-07-25 08:02:39,998 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:02:39,998 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:02:41,581 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:02:42,165 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:02:42,292 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:02:42,292 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:03:36,457 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 08:03:36,458 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 08:03:36,559 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 08:03:36,560 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 08:03:36,569 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description        invoice_date invoice_no product_id  quantity  unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER 2010-12-01 08:26:00     536365     85123A         6        2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN 2010-12-01 08:26:00     536365      71053         6        3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES 2010-12-01 08:26:00     536365      22752         2        7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER 2010-12-01 08:26:00     536365      21730         6        4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK 2010-12-01 08:28:00     536366      22633         6        1.85
+2018-07-25 08:03:36,571 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 08:03:36,574 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 08:03:36,574 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 08:03:37,526 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 08:03:57,548 - implicit_colab_filtering - INFO     - training time: 11.0s evaluation time: 6.6s
+2018-07-25 08:03:57,548 - implicit_colab_filtering - INFO     - AUROC: 0.89, precision: 0.062, mean average precision: 0.024
+2018-07-25 08:03:57,550 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 08:04:15,126 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:04:32,385 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:04:50,502 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.1, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:06:02,197 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:06:02,197 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:06:03,708 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:06:04,318 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:06:04,442 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:06:04,442 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:06:58,006 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 08:06:58,006 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 08:06:58,122 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 08:06:58,123 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 08:06:58,133 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description        invoice_date invoice_no product_id  quantity  unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER 2010-12-01 08:26:00     536365     85123A         6        2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN 2010-12-01 08:26:00     536365      71053         6        3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES 2010-12-01 08:26:00     536365      22752         2        7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER 2010-12-01 08:26:00     536365      21730         6        4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK 2010-12-01 08:28:00     536366      22633         6        1.85
+2018-07-25 08:06:58,135 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 08:06:58,137 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 08:06:58,138 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 08:06:59,231 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 08:07:18,097 - implicit_colab_filtering - INFO     - training time: 10.5s evaluation time: 5.7s
+2018-07-25 08:07:18,097 - implicit_colab_filtering - INFO     - AUROC: 0.89, precision: 0.063, mean average precision: 0.026
+2018-07-25 08:07:18,099 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 08:07:33,721 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:07:50,058 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:08:06,406 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.1, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:08:22,520 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.5, AUROC: 0.86, p: 0.032, map: 0.011
+2018-07-25 08:08:38,229 - implicit_colab_filtering - INFO     - factors: 5, regularization: 1, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:08:54,583 - implicit_colab_filtering - INFO     - factors: 5, regularization: 5, AUROC: 0.86, p: 0.031, map: 0.010
+2018-07-25 08:09:11,099 - implicit_colab_filtering - INFO     - factors: 5, regularization: 10, AUROC: 0.86, p: 0.031, map: 0.010
+2018-07-25 08:09:27,558 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.88, p: 0.050, map: 0.019
+2018-07-25 08:09:43,721 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.87, p: 0.049, map: 0.018
+2018-07-25 08:10:01,633 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.1, AUROC: 0.87, p: 0.048, map: 0.018
+2018-07-25 08:10:18,764 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.5, AUROC: 0.87, p: 0.047, map: 0.018
+2018-07-25 08:10:35,960 - implicit_colab_filtering - INFO     - factors: 10, regularization: 1, AUROC: 0.87, p: 0.046, map: 0.017
+2018-07-25 08:10:54,031 - implicit_colab_filtering - INFO     - factors: 10, regularization: 5, AUROC: 0.87, p: 0.047, map: 0.017
+2018-07-25 08:11:10,361 - implicit_colab_filtering - INFO     - factors: 10, regularization: 10, AUROC: 0.87, p: 0.047, map: 0.018
+2018-07-25 08:11:29,015 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.001, AUROC: 0.89, p: 0.065, map: 0.026
+2018-07-25 08:11:47,473 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.01, AUROC: 0.89, p: 0.061, map: 0.025
+2018-07-25 08:12:06,515 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.1, AUROC: 0.89, p: 0.063, map: 0.025
+2018-07-25 08:12:25,107 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.5, AUROC: 0.89, p: 0.061, map: 0.025
+2018-07-25 08:15:48,152 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:15:48,152 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:15:49,588 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:15:50,178 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:15:50,301 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:15:50,301 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:16:45,309 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 08:16:45,309 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 08:16:45,417 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 08:16:45,417 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 08:16:45,427 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description        invoice_date invoice_no product_id  quantity  unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER 2010-12-01 08:26:00     536365     85123A         6        2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN 2010-12-01 08:26:00     536365      71053         6        3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES 2010-12-01 08:26:00     536365      22752         2        7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER 2010-12-01 08:26:00     536365      21730         6        4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK 2010-12-01 08:28:00     536366      22633         6        1.85
+2018-07-25 08:16:45,429 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 08:16:45,432 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 08:16:45,432 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 08:16:46,425 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 08:17:06,083 - implicit_colab_filtering - INFO     - training time: 10.9s evaluation time: 6.2s
+2018-07-25 08:17:06,083 - implicit_colab_filtering - INFO     - AUROC: 0.89, precision: 0.063, mean average precision: 0.025
+2018-07-25 08:17:06,084 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 08:17:23,424 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.86, p: 0.034, map: 0.011
+2018-07-25 08:17:40,175 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.86, p: 0.034, map: 0.011
+2018-07-25 08:17:57,058 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.1, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:18:13,447 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.5, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:18:29,540 - implicit_colab_filtering - INFO     - factors: 5, regularization: 1, AUROC: 0.86, p: 0.033, map: 0.011
+2018-07-25 08:18:46,310 - implicit_colab_filtering - INFO     - factors: 5, regularization: 5, AUROC: 0.86, p: 0.030, map: 0.010
+2018-07-25 08:19:03,214 - implicit_colab_filtering - INFO     - factors: 5, regularization: 10, AUROC: 0.86, p: 0.030, map: 0.010
+2018-07-25 08:19:19,993 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.88, p: 0.048, map: 0.017
+2018-07-25 08:19:37,622 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.88, p: 0.048, map: 0.018
+2018-07-25 08:19:53,985 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.1, AUROC: 0.87, p: 0.048, map: 0.018
+2018-07-25 08:20:11,228 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.5, AUROC: 0.87, p: 0.047, map: 0.017
+2018-07-25 08:20:28,116 - implicit_colab_filtering - INFO     - factors: 10, regularization: 1, AUROC: 0.87, p: 0.047, map: 0.017
+2018-07-25 08:20:45,009 - implicit_colab_filtering - INFO     - factors: 10, regularization: 5, AUROC: 0.87, p: 0.047, map: 0.018
+2018-07-25 08:21:01,821 - implicit_colab_filtering - INFO     - factors: 10, regularization: 10, AUROC: 0.87, p: 0.048, map: 0.017
+2018-07-25 08:21:21,416 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.001, AUROC: 0.89, p: 0.063, map: 0.025
+2018-07-25 08:21:40,629 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.01, AUROC: 0.89, p: 0.064, map: 0.026
+2018-07-25 08:21:59,989 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.1, AUROC: 0.89, p: 0.063, map: 0.025
+2018-07-25 08:22:19,314 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.5, AUROC: 0.89, p: 0.060, map: 0.024
+2018-07-25 08:22:38,379 - implicit_colab_filtering - INFO     - factors: 20, regularization: 1, AUROC: 0.89, p: 0.062, map: 0.025
+2018-07-25 08:22:57,624 - implicit_colab_filtering - INFO     - factors: 20, regularization: 5, AUROC: 0.89, p: 0.061, map: 0.025
+2018-07-25 08:23:17,051 - implicit_colab_filtering - INFO     - factors: 20, regularization: 10, AUROC: 0.89, p: 0.062, map: 0.024
+2018-07-25 08:23:37,890 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.001, AUROC: 0.91, p: 0.078, map: 0.033
+2018-07-25 08:23:58,265 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.01, AUROC: 0.91, p: 0.078, map: 0.032
+2018-07-25 08:24:22,057 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.1, AUROC: 0.91, p: 0.076, map: 0.032
+2018-07-25 08:24:42,076 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.5, AUROC: 0.91, p: 0.075, map: 0.031
+2018-07-25 08:25:02,551 - implicit_colab_filtering - INFO     - factors: 40, regularization: 1, AUROC: 0.91, p: 0.075, map: 0.031
+2018-07-25 08:25:22,823 - implicit_colab_filtering - INFO     - factors: 40, regularization: 5, AUROC: 0.91, p: 0.074, map: 0.031
+2018-07-25 08:25:43,063 - implicit_colab_filtering - INFO     - factors: 40, regularization: 10, AUROC: 0.91, p: 0.076, map: 0.031
+2018-07-25 08:26:06,384 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.001, AUROC: 0.92, p: 0.085, map: 0.036
+2018-07-25 08:26:29,263 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.01, AUROC: 0.92, p: 0.083, map: 0.037
+2018-07-25 08:26:53,036 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.1, AUROC: 0.92, p: 0.083, map: 0.036
+2018-07-25 08:27:17,019 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.5, AUROC: 0.92, p: 0.081, map: 0.035
+2018-07-25 08:27:40,677 - implicit_colab_filtering - INFO     - factors: 60, regularization: 1, AUROC: 0.92, p: 0.081, map: 0.035
+2018-07-25 08:28:03,472 - implicit_colab_filtering - INFO     - factors: 60, regularization: 5, AUROC: 0.92, p: 0.083, map: 0.036
+2018-07-25 08:28:26,919 - implicit_colab_filtering - INFO     - factors: 60, regularization: 10, AUROC: 0.92, p: 0.082, map: 0.035
+2018-07-25 08:28:51,978 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.001, AUROC: 0.93, p: 0.089, map: 0.039
+2018-07-25 08:29:15,606 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.01, AUROC: 0.93, p: 0.089, map: 0.038
+2018-07-25 08:29:40,284 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.1, AUROC: 0.93, p: 0.087, map: 0.038
+2018-07-25 08:30:04,891 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.5, AUROC: 0.93, p: 0.088, map: 0.038
+2018-07-25 08:30:29,193 - implicit_colab_filtering - INFO     - factors: 80, regularization: 1, AUROC: 0.93, p: 0.086, map: 0.037
+2018-07-25 08:30:54,013 - implicit_colab_filtering - INFO     - factors: 80, regularization: 5, AUROC: 0.93, p: 0.086, map: 0.038
+2018-07-25 08:31:18,533 - implicit_colab_filtering - INFO     - factors: 80, regularization: 10, AUROC: 0.93, p: 0.086, map: 0.037
+2018-07-25 08:31:42,928 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.001, AUROC: 0.94, p: 0.091, map: 0.040
+2018-07-25 08:32:07,062 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.01, AUROC: 0.94, p: 0.090, map: 0.040
+2018-07-25 08:32:30,511 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.1, AUROC: 0.93, p: 0.089, map: 0.040
+2018-07-25 08:32:54,833 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.5, AUROC: 0.93, p: 0.088, map: 0.039
+2018-07-25 08:33:19,485 - implicit_colab_filtering - INFO     - factors: 100, regularization: 1, AUROC: 0.93, p: 0.088, map: 0.038
+2018-07-25 08:33:44,022 - implicit_colab_filtering - INFO     - factors: 100, regularization: 5, AUROC: 0.93, p: 0.091, map: 0.040
+2018-07-25 08:34:08,522 - implicit_colab_filtering - INFO     - factors: 100, regularization: 10, AUROC: 0.93, p: 0.090, map: 0.039
+2018-07-25 08:34:34,938 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.001, AUROC: 0.94, p: 0.094, map: 0.043
+2018-07-25 08:35:00,837 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.01, AUROC: 0.94, p: 0.094, map: 0.043
+2018-07-25 08:35:27,693 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.1, AUROC: 0.94, p: 0.095, map: 0.043
+2018-07-25 08:35:53,140 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.5, AUROC: 0.94, p: 0.095, map: 0.042
+2018-07-25 08:36:19,365 - implicit_colab_filtering - INFO     - factors: 150, regularization: 1, AUROC: 0.94, p: 0.094, map: 0.043
+2018-07-25 08:36:45,518 - implicit_colab_filtering - INFO     - factors: 150, regularization: 5, AUROC: 0.94, p: 0.094, map: 0.042
+2018-07-25 08:37:13,016 - implicit_colab_filtering - INFO     - factors: 150, regularization: 10, AUROC: 0.94, p: 0.095, map: 0.043
+2018-07-25 08:37:40,273 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.001, AUROC: 0.95, p: 0.095, map: 0.043
+2018-07-25 08:38:06,865 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.01, AUROC: 0.95, p: 0.095, map: 0.043
+2018-07-25 08:38:33,780 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.1, AUROC: 0.95, p: 0.096, map: 0.043
+2018-07-25 08:39:00,903 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.5, AUROC: 0.95, p: 0.097, map: 0.044
+2018-07-25 08:39:27,884 - implicit_colab_filtering - INFO     - factors: 180, regularization: 1, AUROC: 0.95, p: 0.095, map: 0.043
+2018-07-25 08:39:55,031 - implicit_colab_filtering - INFO     - factors: 180, regularization: 5, AUROC: 0.95, p: 0.097, map: 0.044
+2018-07-25 08:40:21,397 - implicit_colab_filtering - INFO     - factors: 180, regularization: 10, AUROC: 0.95, p: 0.098, map: 0.044
+2018-07-25 08:43:55,978 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:43:55,978 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:43:57,578 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:43:58,214 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:43:58,374 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:43:58,374 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:44:48,801 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:44:48,802 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:44:50,230 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:44:50,806 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:44:50,931 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:44:50,931 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:45:54,989 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:45:54,990 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:45:56,600 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:45:57,284 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:45:57,409 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:45:57,409 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:46:51,128 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 08:46:51,128 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 08:46:51,226 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 08:46:51,226 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 08:46:51,236 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description        invoice_date invoice_no product_id  quantity  unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER 2010-12-01 08:26:00     536365     85123A         6        2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN 2010-12-01 08:26:00     536365      71053         6        3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES 2010-12-01 08:26:00     536365      22752         2        7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER 2010-12-01 08:26:00     536365      21730         6        4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK 2010-12-01 08:28:00     536366      22633         6        1.85
+2018-07-25 08:46:51,238 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 08:46:51,240 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 08:46:51,241 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 08:46:52,183 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 08:47:11,449 - implicit_colab_filtering - INFO     - training time: 10.3s evaluation time: 6.3s
+2018-07-25 08:47:11,449 - implicit_colab_filtering - INFO     - AUROC: 0.89, precision: 0.063, mean average precision: 0.025
+2018-07-25 08:47:11,449 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 08:47:28,451 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.86, p: 0.032, map: 0.010
+2018-07-25 08:47:45,106 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.86, p: 0.032, map: 0.010
+2018-07-25 08:48:02,456 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.1, AUROC: 0.86, p: 0.030, map: 0.009
+2018-07-25 08:48:19,376 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.5, AUROC: 0.86, p: 0.029, map: 0.009
+2018-07-25 08:48:36,271 - implicit_colab_filtering - INFO     - factors: 5, regularization: 1, AUROC: 0.86, p: 0.033, map: 0.010
+2018-07-25 08:48:53,357 - implicit_colab_filtering - INFO     - factors: 5, regularization: 5, AUROC: 0.85, p: 0.028, map: 0.009
+2018-07-25 08:49:11,135 - implicit_colab_filtering - INFO     - factors: 5, regularization: 10, AUROC: 0.86, p: 0.030, map: 0.010
+2018-07-25 08:49:28,745 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.88, p: 0.048, map: 0.018
+2018-07-25 08:49:46,477 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.87, p: 0.048, map: 0.017
+2018-07-25 08:50:04,409 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.1, AUROC: 0.87, p: 0.048, map: 0.018
+2018-07-25 08:50:22,505 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.5, AUROC: 0.87, p: 0.047, map: 0.017
+2018-07-25 08:50:40,278 - implicit_colab_filtering - INFO     - factors: 10, regularization: 1, AUROC: 0.87, p: 0.046, map: 0.017
+2018-07-25 08:50:58,063 - implicit_colab_filtering - INFO     - factors: 10, regularization: 5, AUROC: 0.87, p: 0.047, map: 0.017
+2018-07-25 08:51:15,732 - implicit_colab_filtering - INFO     - factors: 10, regularization: 10, AUROC: 0.87, p: 0.046, map: 0.016
+2018-07-25 08:51:35,910 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.001, AUROC: 0.89, p: 0.063, map: 0.024
+2018-07-25 08:51:56,265 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.01, AUROC: 0.89, p: 0.063, map: 0.025
+2018-07-25 08:52:16,517 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.1, AUROC: 0.89, p: 0.063, map: 0.024
+2018-07-25 08:52:36,546 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.5, AUROC: 0.89, p: 0.063, map: 0.025
+2018-07-25 08:52:56,593 - implicit_colab_filtering - INFO     - factors: 20, regularization: 1, AUROC: 0.89, p: 0.062, map: 0.024
+2018-07-25 08:53:16,435 - implicit_colab_filtering - INFO     - factors: 20, regularization: 5, AUROC: 0.89, p: 0.062, map: 0.025
+2018-07-25 08:53:36,680 - implicit_colab_filtering - INFO     - factors: 20, regularization: 10, AUROC: 0.89, p: 0.062, map: 0.025
+2018-07-25 08:53:57,775 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.001, AUROC: 0.91, p: 0.076, map: 0.031
+2018-07-25 08:55:45,540 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:55:45,540 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:55:47,021 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:55:47,624 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:55:47,753 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:55:47,754 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:57:47,805 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 08:57:47,805 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 08:57:49,415 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 08:57:50,182 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 08:57:50,323 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 08:57:50,323 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 08:58:44,333 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 08:58:44,333 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 08:58:44,435 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 08:58:44,435 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 08:58:44,447 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description    ...     product_id quantity unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER    ...         85123A        6       2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN    ...          71053        6       3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES    ...          22752        2       7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER    ...          21730        6       4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK    ...          22633        6       1.85
+
+[5 rows x 8 columns]
+2018-07-25 08:58:44,449 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 08:58:44,451 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 08:58:44,451 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 08:58:45,417 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 08:59:04,462 - implicit_colab_filtering - INFO     - training time: 10.9s evaluation time: 6.0s
+2018-07-25 08:59:04,462 - implicit_colab_filtering - INFO     - AUROC: 0.85, precision: 0.102, mean average precision: 0.048
+2018-07-25 08:59:04,462 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 08:59:20,317 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.84, p: 0.053, map: 0.018
+2018-07-25 08:59:36,212 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.84, p: 0.051, map: 0.017
+2018-07-25 08:59:52,602 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.1, AUROC: 0.84, p: 0.050, map: 0.017
+2018-07-25 09:00:08,363 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.5, AUROC: 0.84, p: 0.049, map: 0.017
+2018-07-25 09:00:23,644 - implicit_colab_filtering - INFO     - factors: 5, regularization: 1, AUROC: 0.84, p: 0.048, map: 0.016
+2018-07-25 09:00:39,573 - implicit_colab_filtering - INFO     - factors: 5, regularization: 5, AUROC: 0.84, p: 0.048, map: 0.017
+2018-07-25 09:00:56,050 - implicit_colab_filtering - INFO     - factors: 5, regularization: 10, AUROC: 0.84, p: 0.054, map: 0.019
+2018-07-25 09:01:12,804 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.85, p: 0.079, map: 0.033
+2018-07-25 09:01:29,633 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.85, p: 0.080, map: 0.035
+2018-07-25 09:01:46,942 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.1, AUROC: 0.85, p: 0.076, map: 0.030
+2018-07-25 09:02:03,465 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.5, AUROC: 0.85, p: 0.074, map: 0.030
+2018-07-25 09:02:20,721 - implicit_colab_filtering - INFO     - factors: 10, regularization: 1, AUROC: 0.85, p: 0.078, map: 0.032
+2018-07-25 09:02:37,452 - implicit_colab_filtering - INFO     - factors: 10, regularization: 5, AUROC: 0.85, p: 0.075, map: 0.030
+2018-07-25 09:02:54,365 - implicit_colab_filtering - INFO     - factors: 10, regularization: 10, AUROC: 0.84, p: 0.072, map: 0.029
+2018-07-25 09:03:13,765 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.001, AUROC: 0.85, p: 0.100, map: 0.048
+2018-07-25 09:03:33,040 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.01, AUROC: 0.85, p: 0.101, map: 0.047
+2018-07-25 09:03:51,878 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.1, AUROC: 0.85, p: 0.099, map: 0.048
+2018-07-25 09:04:11,112 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.5, AUROC: 0.85, p: 0.098, map: 0.046
+2018-07-25 09:04:30,392 - implicit_colab_filtering - INFO     - factors: 20, regularization: 1, AUROC: 0.85, p: 0.096, map: 0.044
+2018-07-25 09:04:52,278 - implicit_colab_filtering - INFO     - factors: 20, regularization: 5, AUROC: 0.85, p: 0.099, map: 0.047
+2018-07-25 09:05:10,429 - implicit_colab_filtering - INFO     - factors: 20, regularization: 10, AUROC: 0.85, p: 0.098, map: 0.046
+2018-07-25 09:05:30,189 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.001, AUROC: 0.84, p: 0.126, map: 0.062
+2018-07-25 09:05:49,468 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.01, AUROC: 0.84, p: 0.126, map: 0.062
+2018-07-25 09:06:09,192 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.1, AUROC: 0.84, p: 0.120, map: 0.060
+2018-07-25 09:06:28,928 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.5, AUROC: 0.84, p: 0.121, map: 0.059
+2018-07-25 09:06:48,690 - implicit_colab_filtering - INFO     - factors: 40, regularization: 1, AUROC: 0.84, p: 0.117, map: 0.057
+2018-07-25 09:07:08,287 - implicit_colab_filtering - INFO     - factors: 40, regularization: 5, AUROC: 0.84, p: 0.120, map: 0.059
+2018-07-25 09:07:28,104 - implicit_colab_filtering - INFO     - factors: 40, regularization: 10, AUROC: 0.84, p: 0.120, map: 0.060
+2018-07-25 09:07:50,439 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.001, AUROC: 0.83, p: 0.137, map: 0.069
+2018-07-25 09:08:13,257 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.01, AUROC: 0.83, p: 0.132, map: 0.068
+2018-07-25 09:08:36,119 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.1, AUROC: 0.83, p: 0.133, map: 0.067
+2018-07-25 09:08:58,788 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.5, AUROC: 0.83, p: 0.131, map: 0.066
+2018-07-25 09:09:21,387 - implicit_colab_filtering - INFO     - factors: 60, regularization: 1, AUROC: 0.83, p: 0.129, map: 0.066
+2018-07-25 09:09:44,180 - implicit_colab_filtering - INFO     - factors: 60, regularization: 5, AUROC: 0.83, p: 0.130, map: 0.066
+2018-07-25 09:10:06,628 - implicit_colab_filtering - INFO     - factors: 60, regularization: 10, AUROC: 0.83, p: 0.130, map: 0.065
+2018-07-25 09:10:30,143 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.001, AUROC: 0.82, p: 0.140, map: 0.071
+2018-07-25 09:10:53,544 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.01, AUROC: 0.82, p: 0.140, map: 0.073
+2018-07-25 09:11:17,214 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.1, AUROC: 0.82, p: 0.138, map: 0.071
+2018-07-25 09:11:41,083 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.5, AUROC: 0.82, p: 0.136, map: 0.070
+2018-07-25 09:12:04,615 - implicit_colab_filtering - INFO     - factors: 80, regularization: 1, AUROC: 0.82, p: 0.137, map: 0.069
+2018-07-25 09:12:28,405 - implicit_colab_filtering - INFO     - factors: 80, regularization: 5, AUROC: 0.82, p: 0.136, map: 0.070
+2018-07-25 09:12:52,235 - implicit_colab_filtering - INFO     - factors: 80, regularization: 10, AUROC: 0.83, p: 0.137, map: 0.071
+2018-07-25 09:13:16,799 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.001, AUROC: 0.81, p: 0.144, map: 0.075
+2018-07-25 09:13:40,070 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.01, AUROC: 0.81, p: 0.143, map: 0.076
+2018-07-25 09:14:03,548 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.1, AUROC: 0.82, p: 0.144, map: 0.076
+2018-07-25 09:14:26,609 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.5, AUROC: 0.82, p: 0.141, map: 0.073
+2018-07-25 09:14:49,832 - implicit_colab_filtering - INFO     - factors: 100, regularization: 1, AUROC: 0.81, p: 0.141, map: 0.073
+2018-07-25 09:15:13,974 - implicit_colab_filtering - INFO     - factors: 100, regularization: 5, AUROC: 0.82, p: 0.142, map: 0.073
+2018-07-25 09:15:38,209 - implicit_colab_filtering - INFO     - factors: 100, regularization: 10, AUROC: 0.82, p: 0.142, map: 0.074
+2018-07-25 09:16:03,138 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.001, AUROC: 0.80, p: 0.150, map: 0.078
+2018-07-25 09:16:28,297 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.01, AUROC: 0.80, p: 0.147, map: 0.080
+2018-07-25 09:16:53,294 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.1, AUROC: 0.80, p: 0.149, map: 0.078
+2018-07-25 09:17:18,103 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.5, AUROC: 0.80, p: 0.152, map: 0.080
+2018-07-25 09:17:42,874 - implicit_colab_filtering - INFO     - factors: 150, regularization: 1, AUROC: 0.80, p: 0.149, map: 0.079
+2018-07-25 09:18:08,017 - implicit_colab_filtering - INFO     - factors: 150, regularization: 5, AUROC: 0.80, p: 0.151, map: 0.079
+2018-07-25 09:18:32,868 - implicit_colab_filtering - INFO     - factors: 150, regularization: 10, AUROC: 0.81, p: 0.152, map: 0.081
+2018-07-25 09:18:58,675 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.001, AUROC: 0.78, p: 0.150, map: 0.079
+2018-07-25 09:19:24,654 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.01, AUROC: 0.79, p: 0.149, map: 0.080
+2018-07-25 09:19:50,529 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.1, AUROC: 0.79, p: 0.153, map: 0.082
+2018-07-25 09:20:16,503 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.5, AUROC: 0.79, p: 0.152, map: 0.081
+2018-07-25 09:20:41,927 - implicit_colab_filtering - INFO     - factors: 180, regularization: 1, AUROC: 0.79, p: 0.153, map: 0.081
+2018-07-25 09:21:07,899 - implicit_colab_filtering - INFO     - factors: 180, regularization: 5, AUROC: 0.80, p: 0.153, map: 0.081
+2018-07-25 09:21:33,769 - implicit_colab_filtering - INFO     - factors: 180, regularization: 10, AUROC: 0.80, p: 0.154, map: 0.082
+2018-07-25 10:34:27,628 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 10:34:27,628 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 10:34:29,551 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 10:34:30,240 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 10:34:30,381 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 10:34:30,382 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 10:35:23,158 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 10:35:23,158 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 10:35:23,256 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 10:35:23,256 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 10:35:23,269 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description    ...     product_id quantity unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER    ...         85123A        6       2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN    ...          71053        6       3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES    ...          22752        2       7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER    ...          21730        6       4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK    ...          22633        6       1.85
+
+[5 rows x 8 columns]
+2018-07-25 10:35:23,271 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 10:35:23,273 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 10:35:23,274 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 10:35:24,199 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 10:35:43,286 - implicit_colab_filtering - INFO     - training time: 10.2s evaluation time: 6.3s
+2018-07-25 10:35:43,287 - implicit_colab_filtering - INFO     - AUROC: 0.85, precision: 0.101, mean average precision: 0.049
+2018-07-25 10:35:43,287 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 10:35:59,794 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.84, p: 0.050, map: 0.016
+2018-07-25 10:36:16,274 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.84, p: 0.048, map: 0.016
+2018-07-25 10:36:33,100 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.85, p: 0.076, map: 0.034
+2018-07-25 10:36:50,101 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.85, p: 0.077, map: 0.033
+2018-07-25 10:36:50,718 - implicit_colab_filtering - DEBUG    - 
+    factors  regularization  precision  mean_avg_precision  area_under_roc
+3       10           0.010   0.077454            0.033396        0.848770
+2       10           0.001   0.076486            0.034317        0.848096
+0        5           0.001   0.050143            0.016378        0.842193
+1        5           0.010   0.048167            0.015708        0.841459
+2018-07-25 10:36:50,720 - implicit_colab_filtering - INFO     - Generating final results based on best set of hyperparams
+2018-07-25 10:36:50,720 - implicit_colab_filtering - INFO     - training model on all data
+2018-07-25 10:36:59,678 - implicit_colab_filtering - INFO     - calculating user-items ratings matrix
+2018-07-25 10:36:59,746 - implicit_colab_filtering - INFO     - saving user-item ratings to disk
+2018-07-25 10:38:39,199 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 10:38:39,200 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 10:38:40,659 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 10:38:41,243 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 10:38:41,370 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 10:38:41,371 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 10:39:35,199 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 10:39:35,200 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 10:39:35,292 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 10:39:35,292 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 10:39:35,304 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description    ...     product_id quantity unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER    ...         85123A        6       2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN    ...          71053        6       3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES    ...          22752        2       7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER    ...          21730        6       4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK    ...          22633        6       1.85
+
+[5 rows x 8 columns]
+2018-07-25 10:39:35,306 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 10:39:35,309 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 10:39:35,309 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 10:39:36,257 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 10:39:54,766 - implicit_colab_filtering - INFO     - training time: 10.3s evaluation time: 5.9s
+2018-07-25 10:39:54,767 - implicit_colab_filtering - INFO     - AUROC: 0.85, precision: 0.102, mean average precision: 0.048
+2018-07-25 10:39:54,767 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 10:40:11,551 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.84, p: 0.052, map: 0.020
+2018-07-25 10:40:27,963 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.84, p: 0.053, map: 0.019
+2018-07-25 10:40:45,190 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.85, p: 0.075, map: 0.033
+2018-07-25 10:41:02,611 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.85, p: 0.076, map: 0.032
+2018-07-25 10:41:03,243 - implicit_colab_filtering - DEBUG    - 
+    factors  regularization  precision  mean_avg_precision  area_under_roc
+3       10           0.010   0.076200            0.032285        0.848452
+2       10           0.001   0.074526            0.033445        0.848285
+0        5           0.001   0.052407            0.020245        0.842497
+1        5           0.010   0.053164            0.019427        0.841855
+2018-07-25 10:41:03,245 - implicit_colab_filtering - INFO     - Generating final results based on best set of hyperparams
+2018-07-25 10:41:03,245 - implicit_colab_filtering - INFO     - training model on all data
+2018-07-25 10:41:11,940 - implicit_colab_filtering - INFO     - calculating user-items ratings matrix
+2018-07-25 10:41:12,017 - implicit_colab_filtering - INFO     - saving user-item ratings to disk
+2018-07-25 10:47:07,328 - implicit_colab_filtering - INFO     - Reading data
+2018-07-25 10:47:07,328 - implicit_colab_filtering - DEBUG    - reading data file from disk
+2018-07-25 10:47:08,798 - implicit_colab_filtering - DEBUG    - creating DataFrame from json object
+2018-07-25 10:47:09,371 - implicit_colab_filtering - DEBUG    - Dataframe information
+2018-07-25 10:47:09,497 - implicit_colab_filtering - DEBUG    - 
+ None
+2018-07-25 10:47:09,497 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - start
+2018-07-25 10:48:02,702 - implicit_colab_filtering - DEBUG    - converting date strings to datetime - end
+2018-07-25 10:48:02,703 - implicit_colab_filtering - DEBUG    - Dataframe Description
+2018-07-25 10:48:02,800 - implicit_colab_filtering - DEBUG    - 
+          customer_id       quantity     unit_price
+count  322875.000000  322875.000000  322875.000000
+mean    15285.738180      12.103250       2.934132
+std      1712.664883     278.315144       6.228682
+min     12346.000000  -80995.000000       0.000000
+25%     13952.000000       2.000000       1.250000
+50%     15150.000000       5.000000       1.950000
+75%     16788.000000      12.000000       3.750000
+max     18287.000000   80995.000000    1100.440000
+2018-07-25 10:48:02,800 - implicit_colab_filtering - DEBUG    - Dataframe top 5 rows
+2018-07-25 10:48:02,812 - implicit_colab_filtering - DEBUG    - 
+           country  customer_id                         description    ...     product_id quantity unit_price
+0  United Kingdom        17850  WHITE HANGING HEART T-LIGHT HOLDER    ...         85123A        6       2.55
+1  United Kingdom        17850                 WHITE METAL LANTERN    ...          71053        6       3.39
+2  United Kingdom        17850        SET 7 BABUSHKA NESTING BOXES    ...          22752        2       7.65
+3  United Kingdom        17850   GLASS STAR FROSTED T-LIGHT HOLDER    ...          21730        6       4.25
+4  United Kingdom        17850              HAND WARMER UNION JACK    ...          22633        6       1.85
+
+[5 rows x 8 columns]
+2018-07-25 10:48:02,814 - implicit_colab_filtering - INFO     - total number of return transactions: 6920
+2018-07-25 10:48:02,816 - implicit_colab_filtering - INFO     - total number of customer visits when products were returned:3010
+2018-07-25 10:48:02,816 - implicit_colab_filtering - INFO     - Transforming data
+2018-07-25 10:48:03,782 - implicit_colab_filtering - INFO     - Training and Validation
+2018-07-25 10:48:12,790 - implicit_colab_filtering - INFO     - training time: 1.7s evaluation time: 5.8s
+2018-07-25 10:48:12,790 - implicit_colab_filtering - INFO     - AUROC: 0.85, precision: 0.099, mean average precision: 0.047
+2018-07-25 10:48:12,790 - implicit_colab_filtering - INFO     - Hyperparameter Tuning
+2018-07-25 10:48:21,011 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.001, AUROC: 0.84, p: 0.050, map: 0.018
+2018-07-25 10:48:29,201 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.01, AUROC: 0.84, p: 0.051, map: 0.018
+2018-07-25 10:48:37,176 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.1, AUROC: 0.84, p: 0.048, map: 0.018
+2018-07-25 10:48:45,199 - implicit_colab_filtering - INFO     - factors: 5, regularization: 0.5, AUROC: 0.84, p: 0.044, map: 0.015
+2018-07-25 10:48:53,173 - implicit_colab_filtering - INFO     - factors: 5, regularization: 1, AUROC: 0.84, p: 0.049, map: 0.018
+2018-07-25 10:49:01,242 - implicit_colab_filtering - INFO     - factors: 5, regularization: 5, AUROC: 0.84, p: 0.047, map: 0.017
+2018-07-25 10:49:09,310 - implicit_colab_filtering - INFO     - factors: 5, regularization: 10, AUROC: 0.84, p: 0.046, map: 0.017
+2018-07-25 10:49:17,703 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.001, AUROC: 0.85, p: 0.075, map: 0.034
+2018-07-25 10:49:26,005 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.01, AUROC: 0.85, p: 0.075, map: 0.033
+2018-07-25 10:49:34,352 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.1, AUROC: 0.85, p: 0.075, map: 0.031
+2018-07-25 10:49:42,697 - implicit_colab_filtering - INFO     - factors: 10, regularization: 0.5, AUROC: 0.85, p: 0.071, map: 0.031
+2018-07-25 10:49:51,008 - implicit_colab_filtering - INFO     - factors: 10, regularization: 1, AUROC: 0.85, p: 0.072, map: 0.030
+2018-07-25 10:49:59,356 - implicit_colab_filtering - INFO     - factors: 10, regularization: 5, AUROC: 0.85, p: 0.072, map: 0.030
+2018-07-25 10:50:07,726 - implicit_colab_filtering - INFO     - factors: 10, regularization: 10, AUROC: 0.85, p: 0.075, map: 0.031
+2018-07-25 10:50:16,728 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.001, AUROC: 0.85, p: 0.100, map: 0.047
+2018-07-25 10:50:25,694 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.01, AUROC: 0.85, p: 0.099, map: 0.047
+2018-07-25 10:50:34,633 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.1, AUROC: 0.85, p: 0.100, map: 0.046
+2018-07-25 10:50:43,565 - implicit_colab_filtering - INFO     - factors: 20, regularization: 0.5, AUROC: 0.85, p: 0.098, map: 0.047
+2018-07-25 10:50:52,595 - implicit_colab_filtering - INFO     - factors: 20, regularization: 1, AUROC: 0.85, p: 0.097, map: 0.045
+2018-07-25 10:51:01,586 - implicit_colab_filtering - INFO     - factors: 20, regularization: 5, AUROC: 0.85, p: 0.097, map: 0.043
+2018-07-25 10:51:10,561 - implicit_colab_filtering - INFO     - factors: 20, regularization: 10, AUROC: 0.85, p: 0.097, map: 0.044
+2018-07-25 10:51:19,632 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.001, AUROC: 0.84, p: 0.122, map: 0.061
+2018-07-25 10:51:28,649 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.01, AUROC: 0.84, p: 0.121, map: 0.060
+2018-07-25 10:51:37,709 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.1, AUROC: 0.84, p: 0.121, map: 0.058
+2018-07-25 10:51:46,765 - implicit_colab_filtering - INFO     - factors: 40, regularization: 0.5, AUROC: 0.84, p: 0.119, map: 0.058
+2018-07-25 10:51:55,777 - implicit_colab_filtering - INFO     - factors: 40, regularization: 1, AUROC: 0.84, p: 0.121, map: 0.060
+2018-07-25 10:52:04,854 - implicit_colab_filtering - INFO     - factors: 40, regularization: 5, AUROC: 0.84, p: 0.115, map: 0.056
+2018-07-25 10:52:13,923 - implicit_colab_filtering - INFO     - factors: 40, regularization: 10, AUROC: 0.84, p: 0.119, map: 0.059
+2018-07-25 10:52:24,420 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.001, AUROC: 0.83, p: 0.131, map: 0.065
+2018-07-25 10:52:34,889 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.01, AUROC: 0.83, p: 0.131, map: 0.065
+2018-07-25 10:52:45,660 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.1, AUROC: 0.83, p: 0.129, map: 0.064
+2018-07-25 10:52:56,454 - implicit_colab_filtering - INFO     - factors: 60, regularization: 0.5, AUROC: 0.83, p: 0.131, map: 0.066
+2018-07-25 10:53:07,211 - implicit_colab_filtering - INFO     - factors: 60, regularization: 1, AUROC: 0.83, p: 0.130, map: 0.065
+2018-07-25 10:53:18,001 - implicit_colab_filtering - INFO     - factors: 60, regularization: 5, AUROC: 0.83, p: 0.129, map: 0.065
+2018-07-25 10:53:28,722 - implicit_colab_filtering - INFO     - factors: 60, regularization: 10, AUROC: 0.83, p: 0.130, map: 0.065
+2018-07-25 10:53:39,418 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.001, AUROC: 0.82, p: 0.140, map: 0.072
+2018-07-25 10:53:50,066 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.01, AUROC: 0.82, p: 0.136, map: 0.070
+2018-07-25 10:54:00,675 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.1, AUROC: 0.82, p: 0.136, map: 0.070
+2018-07-25 10:54:11,462 - implicit_colab_filtering - INFO     - factors: 80, regularization: 0.5, AUROC: 0.82, p: 0.137, map: 0.071
+2018-07-25 10:54:22,065 - implicit_colab_filtering - INFO     - factors: 80, regularization: 1, AUROC: 0.82, p: 0.138, map: 0.071
+2018-07-25 10:54:32,698 - implicit_colab_filtering - INFO     - factors: 80, regularization: 5, AUROC: 0.82, p: 0.134, map: 0.069
+2018-07-25 10:54:43,345 - implicit_colab_filtering - INFO     - factors: 80, regularization: 10, AUROC: 0.82, p: 0.139, map: 0.071
+2018-07-25 10:54:54,058 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.001, AUROC: 0.81, p: 0.148, map: 0.077
+2018-07-25 10:55:04,774 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.01, AUROC: 0.81, p: 0.143, map: 0.075
+2018-07-25 10:55:15,411 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.1, AUROC: 0.81, p: 0.141, map: 0.072
+2018-07-25 10:55:25,978 - implicit_colab_filtering - INFO     - factors: 100, regularization: 0.5, AUROC: 0.81, p: 0.142, map: 0.074
+2018-07-25 10:55:36,695 - implicit_colab_filtering - INFO     - factors: 100, regularization: 1, AUROC: 0.81, p: 0.141, map: 0.074
+2018-07-25 10:55:47,292 - implicit_colab_filtering - INFO     - factors: 100, regularization: 5, AUROC: 0.81, p: 0.142, map: 0.073
+2018-07-25 10:55:57,846 - implicit_colab_filtering - INFO     - factors: 100, regularization: 10, AUROC: 0.82, p: 0.142, map: 0.074
+2018-07-25 10:56:11,073 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.001, AUROC: 0.79, p: 0.149, map: 0.080
+2018-07-25 10:56:24,258 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.01, AUROC: 0.79, p: 0.149, map: 0.081
+2018-07-25 10:56:37,165 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.1, AUROC: 0.80, p: 0.148, map: 0.079
+2018-07-25 10:56:50,085 - implicit_colab_filtering - INFO     - factors: 150, regularization: 0.5, AUROC: 0.80, p: 0.149, map: 0.081
+2018-07-25 10:57:03,028 - implicit_colab_filtering - INFO     - factors: 150, regularization: 1, AUROC: 0.80, p: 0.147, map: 0.078
+2018-07-25 10:57:16,004 - implicit_colab_filtering - INFO     - factors: 150, regularization: 5, AUROC: 0.80, p: 0.150, map: 0.079
+2018-07-25 10:57:28,985 - implicit_colab_filtering - INFO     - factors: 150, regularization: 10, AUROC: 0.81, p: 0.151, map: 0.080
+2018-07-25 10:57:42,597 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.001, AUROC: 0.78, p: 0.150, map: 0.084
+2018-07-25 10:57:56,224 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.01, AUROC: 0.79, p: 0.149, map: 0.083
+2018-07-25 10:58:09,391 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.1, AUROC: 0.79, p: 0.150, map: 0.081
+2018-07-25 10:58:22,423 - implicit_colab_filtering - INFO     - factors: 180, regularization: 0.5, AUROC: 0.79, p: 0.153, map: 0.082
+2018-07-25 10:58:35,384 - implicit_colab_filtering - INFO     - factors: 180, regularization: 1, AUROC: 0.79, p: 0.150, map: 0.081
+2018-07-25 10:58:48,540 - implicit_colab_filtering - INFO     - factors: 180, regularization: 5, AUROC: 0.80, p: 0.150, map: 0.079
+2018-07-25 10:59:02,006 - implicit_colab_filtering - INFO     - factors: 180, regularization: 10, AUROC: 0.80, p: 0.153, map: 0.081
+2018-07-25 10:59:07,546 - implicit_colab_filtering - DEBUG    - 
+     factors  regularization  precision  mean_avg_precision  area_under_roc
+14       20           0.001   0.100241            0.046758        0.851582
+15       20           0.010   0.098675            0.046730        0.850052
+16       20           0.100   0.100321            0.045899        0.849263
+18       20           1.000   0.097108            0.045363        0.848716
+20       20          10.000   0.096627            0.044206        0.848626
+2018-07-25 10:59:07,552 - implicit_colab_filtering - INFO     - Generating final results based on best set of hyperparams
+2018-07-25 10:59:07,552 - implicit_colab_filtering - INFO     - training model on all data
+2018-07-25 10:59:08,842 - implicit_colab_filtering - INFO     - calculating user-items ratings matrix
+2018-07-25 10:59:08,910 - implicit_colab_filtering - INFO     - saving user-item ratings to disk
