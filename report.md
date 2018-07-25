@@ -8,6 +8,9 @@ pip -r requirements.txt
 ### Run
 python implicit_colab.py path_to_mixpanel_training_file
 
+### Output File
+Output file can be downloaded from [here](https://drive.google.com/open?id=1bZqwP3TB_jlvKjDg3q0FXKKPyCzlfHQr)
+
 
 ## Literature Review
 There are several techniques to build a recommendation engine based on user-user similarity or item-item similarity or user-item similarity. We will go through the prominent ones.
@@ -98,4 +101,6 @@ CF suffers from the cold-start problem i.e. we can't generate recommendations fo
 - suggest top products in a category for users with zero purchase history
 - recommend items based on item-item similarity for users with less than a threshold (say 5 or 10) purchase history
 
-For item-item similarity we can also use Item2Vec. 
+Item2Vec for item-item similarity
+
+Multi-armed bandit algorithms
