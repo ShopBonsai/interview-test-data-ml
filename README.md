@@ -4,7 +4,7 @@ Welcome to the Machine Learning interview test for Shop Bonsai.
 This interview test simulates a problem that is closely related to what you would be doing here at Shop Bonsai. 
 
 ### Scenario:
-You joined as the new memeber of a small start-up team. Together we are building a new app to sell cool 3rd product 
+You joined as the new memeber of a small start-up team. Together we are building a new app to sell cool 3rd party 
 products! So far, the sales team worked tirelessly and managed to acquire over 100 merchants who each have different 
 brands and products offerings. The developers have made a ton of progress on the mobile app and there's a bunch of
 user activity on the app. The next step is to optimize user conversion rates by offering new recommendations based on the analytics data. 
