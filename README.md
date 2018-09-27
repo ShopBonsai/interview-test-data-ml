@@ -10,7 +10,7 @@ brands and products offerings. The developers have made a ton of progress on the
 user activity on the app. The next step is to optimize user conversion rates by offering new recommendations based on the analytics data. 
 
 ### Goal:
-Your task is to recommend a book that a user is most likely to buy next using the data provided. You can find the dataset here: https://www.dropbox.com/sh/uj3nsf66mtwm36q/AADLUNVShEZ0VI3DsLad6S4Ta?dl=0 
+Your task is to recommend a book that a user is most likely to buy next using the data provided. You can find the dataset here: https://www.dropbox.com/sh/uj3nsf66mtwm36q/AADLUNVShEZ0VI3DsLad6S4Ta?dl=0
 
 Note that your model should be feasible in a production environment - I.E. a complex, deeplearning model might outperform simpler models in terms of recommendation results, but it will be very slow to train and execute. In production, a recommender system will often make batch recommendations for all our current users, and should therefore be fast enough to warrant use. Aim to present a good balance between speed and evaluation metrics (see below). 
 
