@@ -9,7 +9,6 @@ Then use command below:
 
 
 from cross_valid import ALSTrainFlow
-import tensorflow as tf
 
 tf.convert_to_tensor
 als_flow = ALSTrainFlow(rating_path='/home/vigen/Documents/job/recomm_data/UserEvents.csv',
