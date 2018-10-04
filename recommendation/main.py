@@ -1,7 +1,7 @@
 """
 In order to run this just download spark and extract somewhere.
 
-Then user command below:
+Then use command below:
 
 /path/to/your/spark/bin/spark-submit ./main.py cross_valid.py metrics.py --your-options.
 
