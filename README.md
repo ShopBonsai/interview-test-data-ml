@@ -1,6 +1,6 @@
 # Bonsai Interview Test
 
-You could find brief description of my solution in BonsaiShopSolutionDescription.pdf file. Training code is located inside recommendation directory. 
+You could find brief description of my solution in **BonsaiShopSolutionDescription.pdf** file. Training code is located inside recommendation directory. 
 
 Welcome to the Machine Learning interview test for Shop Bonsai.
 
