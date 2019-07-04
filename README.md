@@ -1,7 +1,7 @@
-# Bonsai Interview Test
-Welcome to the Machine Learning interview test for Shop Bonsai.
+# Bonsai  Test
+Welcome to the Machine Learning  test for Shop Bonsai.
 
-This interview test simulates a problem that is closely related to what you would be doing here at Shop Bonsai. 
+This  test simulates a problem that is closely related to what you would be doing here at Shop Bonsai. 
 
 ### Scenario:
 You joined as the new memeber of a small start-up team. Together we are building a new app to sell cool 3rd party 
